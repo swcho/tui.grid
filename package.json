@@ -3,7 +3,6 @@
   "version": "4.0.0",
   "description": "TOAST UI Grid : Powerful data grid control supported by TOAST UI",
   "main": "dist/tui-grid.js",
-  "module": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
     "start": "webpack-dev-server",
