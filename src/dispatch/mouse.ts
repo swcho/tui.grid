@@ -22,7 +22,7 @@ export function setNavigating({ focus }: Store, navigating: boolean) {
 
 type OverflowType = -1 | 0 | 1;
 
-interface ScrollData {
+export interface ScrollData {
   scrollLeft: number;
   scrollTop: number;
 }

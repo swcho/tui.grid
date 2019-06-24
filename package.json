@@ -3,16 +3,19 @@
   "version": "4.0.0",
   "description": "TOAST UI Grid : Powerful data grid control supported by TOAST UI",
   "main": "dist/tui-grid.js",
+  "module": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --mode=production & webpack --mode=production --minify",
+    "build:module": "rm -rf lib; tsc -p tsconfig.module.json",
     "test": "cypress open",
     "test:ci": "cypress run",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
     "ts2js": "tsc --outDir tmpdoc --sourceMap false --target ES2015",
-    "doc:dev" : "npm run ts2js && tuidoc --dev",
-    "doc" : "npm run ts2js && tuidoc"
+    "doc:dev": "npm run ts2js && tuidoc --dev",
+    "doc": "npm run ts2js && tuidoc"
   },
   "repository": {
     "type": "git",

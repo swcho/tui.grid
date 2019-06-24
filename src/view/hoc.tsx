@@ -4,7 +4,7 @@ import { Store } from '../store/types';
 import { DeepReadonly } from 'utility-types';
 import { DispatchProps } from '../dispatch/create';
 
-export function connect<SelectedProps = {}, OwnProps = {}>(
+export function connect<SelectedProps extends object = {}, OwnProps extends object = {}>(
   selector?: (
     store: DeepReadonly<Store>,
     props: DeepReadonly<OwnProps>
@@ -16,9 +16,9 @@ export function connect<SelectedProps = {}, OwnProps = {}>(
     return class extends Component<OwnProps, SelectedProps> {
       public static displayName = `Connect:${WrappedComponent.name}`;
 
-      private unobserve?: () => void;
+      public unobserve?: () => void;
 
-      private setStateUsingSelector(ownProps: OwnProps) {
+      public setStateUsingSelector(ownProps: OwnProps) {
         if (selector) {
           this.setState(selector(this.context.store, ownProps as DeepReadonly<OwnProps>));
         }

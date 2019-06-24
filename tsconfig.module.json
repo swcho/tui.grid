@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "lib"
+  },
+  "exclude": [
+    "cypress",
+    "node_modules",
+    "samples",
+    "types",
+    "stories"
+  ]
+}
