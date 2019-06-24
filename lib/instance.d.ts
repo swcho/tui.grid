@@ -1,0 +1,10 @@
+import Grid from './grid';
+import { GridId } from './store/types';
+import { DataProvider, ModifiedDataManager } from './dataSource/types';
+import { PaginationManager } from './pagination/paginationManager';
+export declare function register(instance: Grid): number;
+export declare function registerDataSources(id: number, dataProvider: DataProvider, dataManager: ModifiedDataManager, paginationManager: PaginationManager): void;
+export declare function getInstance(id: GridId): Grid;
+export declare function getDataProvider(id: GridId): DataProvider;
+export declare function getDataManager(id: GridId): ModifiedDataManager;
+export declare function getPaginationManager(id: GridId): PaginationManager;

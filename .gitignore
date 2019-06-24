@@ -3,7 +3,6 @@ node_modules
 
 # Production
 dist
-lib
 
 # Window
 Thumbs.db

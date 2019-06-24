@@ -1,0 +1,12 @@
+import { Data, ColumnInfo, RowSpan, RowKey, Row, RowCoords, Range } from '../store/types';
+export declare function getRowRangeWithRowSpan(rowRange: Range, colRange: Range, visibleColumns: ColumnInfo[], focusRowIndex: number | null, data: Data): Range;
+export declare function getVerticalPosWithRowSpan(columnName: string, rowSpan: RowSpan, rowCoords: RowCoords, data: Row[]): number[];
+export declare function getRowSpan(rowIndex: number, columnName: string, data: Row[]): RowSpan;
+export declare function getRowSpanTopIndex(rowIndex: number, columnName: string, data: Row[]): number;
+export declare function getRowSpanBottomIndex(rowIndex: number, columnName: string, data: Row[]): number;
+export declare function getRowSpanByRowKey(rowKey: RowKey, columnName: string, data: Row[]): RowSpan | null;
+export declare function getMaxRowSpanCount(rowIndex: number, data: Row[]): number;
+export declare function enableRowSpan(columnName: string): boolean;
+export declare function createRowSpan(mainRow: boolean, rowKey: RowKey, count: number, spanCount: number): RowSpan;
+export declare function updateRowSpanWhenAppend(data: Row[], prevRow: Row, extendPrevRowSpan: boolean): void;
+export declare function updateRowSpanWhenRemove(data: Row[], removedRow: Row, nextRow: Row, keepRowSpanData: boolean): void;
